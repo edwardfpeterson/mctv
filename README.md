@@ -28,7 +28,10 @@ for a dev server. The proxy config is required to access the API of the node bac
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Data source
+
+## Author
+* **Edward Peterson**
+### Data source
 
 Data comes from [here](http://data.montgomerycountymd.gov/api/views/4mse-ku6q/rows.csv). Originally found from this [link](https://catalog.data.gov/dataset/traffic-violations-56dda).
 

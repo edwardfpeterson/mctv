@@ -30,4 +30,5 @@ html, body {
 }
 .filter-wrapper {
     overflow-y: scroll;
+    overflow-x: hidden;
 }

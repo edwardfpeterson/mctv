@@ -1,0 +1,12 @@
+<div class="layout-wrapper">
+    <div class="table-wrapper">
+        <app-table-display *ngIf="violations" [violations]="violations" [selectedViolation]="selectedViolation" (selectionSender)="receiveViolationSelection($event)"></app-table-display>
+    </div>
+    <div class="filter-wrapper">
+        <app-filter  *ngIf="violations" (notifySearchUpdate)="updateSearchResults($event)" [violations]="violations"></app-filter>
+    </div>
+    <div class="map-wrapper">
+        <app-map-display *ngIf="violations" [violations]="violations" [selectedViolation]="selectedViolation" (selectionSender)="receiveViolationSelection($event)"></app-map-display>
+    </div>
+</div>
+<router-outlet></router-outlet>

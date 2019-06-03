@@ -1,0 +1,3 @@
+<agm-map [latitude]="lat" [longitude]="long" (animation)="BOUNCE">
+  <agm-marker *ngFor="let violation of violations" [latitude]="violation.Latitude" [longitude]="violation.Longitude" (markerClick)="selectViolation(violation)"></agm-marker>
+</agm-map>

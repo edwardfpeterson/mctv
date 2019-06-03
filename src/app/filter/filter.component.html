@@ -1,0 +1,111 @@
+<div class="content-wrapper">
+	<div class="title-wrapper">
+		<div class="subtitle-wrapper">Search</div>
+		<div class="page-controls">
+			Page: <a *ngIf="settings.page > 0" (click)="previousPage()">&lt;</a> <span class="page-number">&nbsp;{{settings.page + 1}}&nbsp;</span> <a (click)="nextPage()">&gt;</a>
+					
+			<span *ngIf="violations">
+				({{settings.page * settings.resultCount + 1}} - {{settings.page * settings.resultCount + violations.length}} )
+			</span>
+		</div>
+		<button id="refreshResults" (click)="updateResults()">Update Results</button>
+		<button id="clearInputs" (click)="clearInputs()">Clear Inputs</button>
+	
+	
+	</div>
+
+	<div class="filter-inputs">
+		<label>Sequence ID:</label>
+		<input [(ngModel)]="template.SeqID">	
+		<label>Date of Stop:</label>
+		<input [(ngModel)]="template['Date Of Stop']">
+		<label>Time of Stop:</label>
+		<input [(ngModel)]="template['Time Of']">
+		<label>Agency:</label>
+		<input [(ngModel)]="template['Agency']">
+		<label>Subagency:</label>
+		<input [(ngModel)]="template['SubAgency']">
+		<label>Description:</label>
+		<input [(ngModel)]="template['Description']">
+		<label>Location:</label>
+		<input [(ngModel)]="template['Location']">
+		<label>Latitude:</label>
+		<input [(ngModel)]="template.Latitude">
+		<label>Longitude:</label>
+		<input [(ngModel)]="template.Longitude">
+		<label>Accident:</label>
+		<input [(ngModel)]="template.Accident">
+		<label>Belts:</label>
+		<input [(ngModel)]="template.Belts">
+		<label>Personal Injury:</label>
+		<input [(ngModel)]="template['Personal Injury']">
+		<label>Property Damage:</label>
+		<input [(ngModel)]="template['Property Damage']">
+		<label>Fatal:</label>
+		<input [(ngModel)]="template.Fatal">
+		<label>Commercial License:</label>
+		<input [(ngModel)]="template['Commercial License']">
+		<label>HAZMAT:</label>
+		<input [(ngModel)]="template.HAZMAT">
+		<label>Commercial Vehicle:</label>
+		<input [(ngModel)]="template['Commercial Vehicle']">
+		<label>Alcohol:</label>
+		<input [(ngModel)]="template.Alcohol">
+		<label>Work Zone:</label>
+		<input [(ngModel)]="template['Work Zone']">
+		<label>State:</label>
+		<input [(ngModel)]="template.State">
+		<label>Vehicle Type:</label>
+		<input [(ngModel)]="template['VehicleType']">
+		<label>Year:</label>
+		<input [(ngModel)]="template.Year">
+		<label>Make:</label>
+		<input [(ngModel)]="template.Make">
+		<label>Model:</label>
+		<input [(ngModel)]="template.Model">
+		<label>Color:</label>
+		<input [(ngModel)]="template.Color">
+		<label>Violation Type:</label>
+		<input [(ngModel)]="template['Violation Type']">
+		<label>Charge:</label>
+		<input [(ngModel)]="template.Charge">
+		<label>Article:</label>
+		<input [(ngModel)]="template.Article">
+		<label>Contributed to Accident:</label>
+		<input [(ngModel)]="template['Contributed To Accident']">
+		<label>Race:</label>
+		<input [(ngModel)]="template.Race">
+		<label>Gender:</label>
+		<input [(ngModel)]="template.Gender">
+		<label>Driver City:</label>
+		<input [(ngModel)]="template['Driver City']">
+		<label>DL State:</label>
+		<input [(ngModel)]="template['DL State']">
+		<label>Arrest Type:</label>
+		<input [(ngModel)]="template['Arrest Type']">
+		<label>Geolocation:</label>
+		<input [(ngModel)]="template.Geolocation">
+		<label>Council Districts:</label>
+		<input [(ngModel)]="template['Council Districts']">
+		<label>Councils:</label>
+		<input [(ngModel)]="template.Councils">
+		<label>Communities:</label>
+		<input [(ngModel)]="template.Communities">
+		<label>Zip Codes:</label>
+		<input [(ngModel)]="template['Zip Codes']">
+		<label>Municipalities:</label>
+		<input [(ngModel)]="template.Municipalities">
+		
+	</div>
+	<br>
+	<div class="quantityControl">
+		<label>
+			Fetch first 
+			<input [(ngModel)]="settings.resultCount">
+			results.
+		</label>
+		
+
+	</div>
+	
+</div>

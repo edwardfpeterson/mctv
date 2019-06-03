@@ -1,0 +1,39 @@
+#tableContainer {
+    padding: 0px;
+    border-radius: 5px;
+}
+table {
+    border-collapse: collapse;
+}
+thead {
+    background-color: #8c4b4e;
+    color: white;
+    
+
+}
+th {
+    padding-left: 3px;
+    padding-right: 3px;
+    border-bottom: 1px black solid;
+    
+}
+tr:nth-child(even){
+    background-color: #f2f2f2
+}
+tbody tr:hover{
+    background-color: #a6cbe6 !important;
+}
+tr {
+    margin: 1px;
+}
+td {
+    text-align: center;
+}
+.selectedRow {
+    background-color: #7cbcea !important;
+}
+
+#errorDisplay {
+    text-align: center;
+    margin-top: 50px;
+}

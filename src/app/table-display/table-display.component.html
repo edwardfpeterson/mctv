@@ -1,0 +1,101 @@
+
+<div id="tableContainer" >
+  <!-- {{violations.length}} entries currently shown... -->
+  <table>
+    <thead>
+      <tr>
+        <th>Sequence ID</th>
+        <th>Date of Stop</th>
+        <th>Time of Stop</th>
+        <th>Agency</th>
+        <th>Subagency</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Accident</th>
+        <th>Belts</th>
+        <th>Personal Injury</th>
+        <th>Property Damage</th>
+        <th>Fatal</th>
+        <th>Commercial License</th>
+        <th>HAZMAT</th>
+        <th>Commercial Vehicle</th>
+        <th>Alcohol</th>
+        <th>Work Zone</th>
+        <th>State</th>
+        <th>Vehicle Type</th>
+        <th>Year</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Violation Type</th>
+        <th>Charge</th>
+        <th>Article</th>
+        <th>Contributed to Accident</th>
+        <th>Race</th>
+        <th>Gender</th>
+        <th>Driver City</th>
+        <th>DL State</th>
+        <th>Arrest Type</th>
+        <th>Geolocation</th>
+        <th>Council Districts</th>
+        <th>Councils</th>
+        <th>Communities</th>
+        <th>Zip Codes</th>
+        <th>Municipalities</th>
+  
+      </tr>
+    </thead>
+    
+    <tbody *ngIf="violations">
+      <tr *ngFor="let violation of violations" [class.selectedRow]="violation.SeqID == selectedViolation?.SeqID" [class]="violation.SeqID" (click)="selectViolation(violation)">
+        <td>{{violation["SeqID"]}}</td>
+        <td>{{violation["Date Of Stop"]}}</td>
+        <td>{{violation["Time Of Stop"]}}</td>
+        <td>{{violation["Agency"]}}</td>
+        <td>{{violation["SubAgency"]}}</td>
+        <td>{{violation["Description"]}}</td>
+        <td>{{violation["Location"]}}</td>
+        <td>{{violation["Latitude"]}}</td>
+        <td>{{violation["Longitude"]}}</td>
+        <td>{{violation["Accident"]}}</td>
+        <td>{{violation["Belts"]}}</td>
+        <td>{{violation["Personal Injury"]}}</td>
+        <td>{{violation["Property Damage"]}}</td>
+        <td>{{violation["Fatal"]}}</td>
+        <td>{{violation["Commercial License"]}}</td>
+        <td>{{violation["HAZMAT"]}}</td>
+        <td>{{violation["Commercial Vehicle"]}}</td>
+        <td>{{violation["Alcohol"]}}</td>
+        <td>{{violation["Work Zone"]}}</td>
+        <td>{{violation["State"]}}</td>
+        <td>{{violation["VehicleType"]}}</td>
+        <td>{{violation["Year"]}}</td>
+        <td>{{violation["Make"]}}</td>
+        <td>{{violation["Model"]}}</td>
+        <td>{{violation["Color"]}}</td>
+        <td>{{violation["Violation Type"]}}</td>
+        <td>{{violation["Charge"]}}</td>
+        <td>{{violation["Article"]}}</td>
+        <td>{{violation["Contributed To Accident"]}}</td>
+        <td>{{violation["Race"]}}</td>
+        <td>{{violation["Gender"]}}</td>
+        <td>{{violation["Driver City"]}}</td>
+        <td>{{violation["DL State"]}}</td>
+        <td>{{violation["Arrest Type"]}}</td>
+        <td>{{violation["Geolocation"]}}</td>
+        <td>{{violation["Council Districts"]}}</td>
+        <td>{{violation["Councils"]}}</td>
+        <td>{{violation["Communities"]}}</td>
+        <td>{{violation["Zip Codes"]}}</td>
+        <td>{{violation["Municipalities"]}}</td>
+
+
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="errorHandler.errorMessage !== ''" id="errorDisplay">
+    An error occurred when fetching from the database. <br>
+    {{errorHandler.errorMessage}}</div>
+</div>

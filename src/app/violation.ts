@@ -1,0 +1,43 @@
+export class Violation {
+ 'SeqID': string;
+ 'Date Of Stop': string;
+ 'Time Of Stop': string;
+ 'Agency': string;
+ 'SubAgency': string;
+ 'Description': string;
+ 'Location': string;
+ 'Latitude': string;
+ 'Longitude': string;
+ 'Accident': string; // Some of these would be booleans, but every once in a while a weird entry doesn't really fit into yes or no.
+ 'Beltds': string;
+ 'Personal Injury': string;
+ 'Property Damage': string;
+ 'Fatal': string;
+ 'Commercial License': string;
+ 'HAZMAT': string;
+ 'Commerical Vehicle': string;
+ 'Alcohol': string;
+ 'Work Zone': string;
+ 'State': string;
+ 'Vehicle Type': string;
+ 'Year': string;
+ 'Make': string;
+ 'Model': string;
+ 'Color': string;
+ 'Violation Type': string;
+ 'Charge': string;
+ 'Article': string;
+ 'Contributed To Accident': string;
+ 'Race': string;
+ 'Gender': string;
+ 'Driver City': string;
+ 'Driver State': string;
+ 'DL State': string;
+ 'Arrest Type': string;
+ 'Geolocation': string;
+ 'Council Districts': string;
+ 'Councils': string;
+ 'Communities': string;
+ 'Zip Codes': string;
+ 'Municipalities': string;
+}

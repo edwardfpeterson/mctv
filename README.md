@@ -8,7 +8,7 @@ The only Node dependency that needs to be installed is Express for API serving o
 ```
 npm install express -save
 ```
-## Development server
+## Deployment
 First, run the node backend with 
 ```
 node --max-old-space-size=8192 server.js
@@ -23,8 +23,11 @@ for a dev server. The proxy config is required to access the API of the node bac
 ## Funcionalities
 
 Clicking on any marker on the map view will highlight and automatically scroll to the violation in the table view.\n
-The search section on the righthand side of the screen can be used to find entries based on any of the text entered into any of the fields of the Search panel.\n
-Use the Update Results button to perform the search and the Clear Inputs button to clear all the input fields in the Search panel.\n
+
+### Search function
+
+The search section on the righthand side of the screen can be used to find entries based on any of the text entered into any of the fields of the Search panel.
+Use the Update Results button to perform the search and the Clear Inputs button to clear all the input fields in the Search panel.
 Above the Update Results button shows the page number of the shown results along with next and previous arrows to change pages.
 You can change the number of results per page with the field in the very bottom of the Search panel. 
 

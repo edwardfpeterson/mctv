@@ -46,6 +46,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Author
 * **Edward Peterson**
+If you have any questions, feel free to contact me at edwardfpeterson@gmail.com
 ### Data source
 
 Data comes from [here](http://data.montgomerycountymd.gov/api/views/4mse-ku6q/rows.csv). Originally found from this [link](https://catalog.data.gov/dataset/traffic-violations-56dda).

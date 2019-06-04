@@ -1,6 +1,6 @@
 # Choptank Transport Interview Project
 
-This project visualizes a database of all traffic violations in Montgomery County Maryland from the past 7 years. Built using Angular 8.0.0. The data set used for this is roughyl 1.5 million entries. 
+This project visualizes a database of all traffic violations in Montgomery County Maryland from the past 7 years. Built using Angular 8.0.0. The data set used for this is roughly 1.5 million entries. 
 
 ## Dependencies
 This project requires the installation of Node.js and Angular CLI.
@@ -9,10 +9,10 @@ The only Node dependency that needs to be installed is Express for API serving o
 npm install express -save
 ```
 Other technologies this project leverages include
-*Angular Google Maps
-*CSVtoJSON
-*Request
-*Body-parser
+* Angular Google Maps
+* CSVtoJSON
+* Request
+* Body-parser
 ## Deployment
 ### Node backend
 First, run the node backend with 

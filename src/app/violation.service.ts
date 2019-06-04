@@ -15,7 +15,6 @@ export class ViolationService {
   }
   searchViolations(): Observable<Violation[]>{
     let headers =  {headers: new  HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded'})};
-    console.log(this.filter);
     return this.http.post<Violation[]>("/api/searchViolations",JSON.stringify(this.filter), headers);
   }
 }

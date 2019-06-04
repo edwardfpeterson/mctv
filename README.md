@@ -8,6 +8,11 @@ The only Node dependency that needs to be installed is Express for API serving o
 ```
 npm install express -save
 ```
+Other technologies this project leverages include
+*Angular Google Maps
+*CSVtoJSON
+*Request
+*Body-parser
 ## Deployment
 ### Node backend
 First, run the node backend with 

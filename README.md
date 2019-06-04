@@ -9,12 +9,14 @@ The only Node dependency that needs to be installed is Express for API serving o
 npm install express -save
 ```
 ## Deployment
+### Node backend
 First, run the node backend with 
 ```
 node --max-old-space-size=8192 server.js
 ```
 Once the server starts downloading the entries of the dataset, it can begin being accessed. The entire dataset doesn't need to be loaded for it to work. It will just work based off of what its got at the moment.
 This will start the backend and the process of downloading the CSV data from its original source.
+### Angular client server
 Run
 ```
 ng serve -o --proxy-config proxy.conf.json

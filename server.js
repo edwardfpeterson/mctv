@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
+const request=require('request')
+const csv=require('csvtojson')
 
 const csvURL = "http://data.montgomerycountymd.gov/api/views/4mse-ku6q/rows.csv";
 
@@ -77,16 +79,14 @@ app.listen(8000, () => {
 });
 var allEntries  = [];
 
-const request=require('request')
-const csv=require('csvtojson')
+
 console.log("Fetching csv database directly from source. It may take a while to load all 1.5 million entries...")
 csv()
 .fromStream(request.get(csvURL))
 .subscribe((json)=>{
     return new Promise((resolve,reject)=>{
-        // long operation for each json e.g. transform / write into database.
         allEntries.push(json);
-        process.stdout.clearLine();
+        //process.stdout.clearLine();
         process.stdout.cursorTo(0);
         process.stdout.write("" + allEntries.length);
 
